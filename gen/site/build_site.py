@@ -147,6 +147,14 @@ def media_inject(path, h):
             return re.sub(r'<div class="pxa-cover"[^>]*>[^<]*</div>', f'<img class="pxa-cover-img" src="{cv}" loading="lazy" alt="" style="{M.COVER_STYLE.get(sl, "")}">', m.group(0), count=1)
         h = re.sub(r'<article class="pxa-case".*?</article>', rep, h, flags=re.S)
     if path == "":
+        HOME = {"Петров-Водкин": "petrov-vodkin", "ОПТИ": "opti", "Невский берег": "nevsky-bereg", "Le Grand": "legrand", "La Perla": "la-perla"}
+        def hrep(m):
+            t = re.search(r"<h3>([^<]*)</h3>", m.group(0))
+            sl = HOME.get(t.group(1).strip()) if t else None
+            cv = M.cover(sl) if sl else None
+            if not cv: return m.group(0)
+            return re.sub(r'<div class="pxa-cover"[^>]*>[^<]*</div>', f'<img class="pxa-cover-img" src="{cv}" loading="lazy" alt="" style="{M.COVER_STYLE.get(sl, "")}">', m.group(0), count=1)
+        h = re.sub(r'<article class="pxa-case">.*?</article>', hrep, h, flags=re.S)
         lg = M.logos()
         if lg: h = h.replace('<section class="pxa pxa-sec" id="pxa-services"', lg + '<section class="pxa pxa-sec" id="pxa-services"', 1); used = True
     if used or 'pxa-play' in h:

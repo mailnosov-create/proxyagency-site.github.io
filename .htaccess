@@ -1,0 +1,26 @@
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+Redirect 301 /uslugi /services/
+Redirect 301 /vsekeysi /cases/
+Redirect 301 /digital /services/
+Redirect 301 /digitalservices /services/ads/
+Redirect 301 /contextual /services/ads/
+Redirect 301 /seo /services/seo-geo/
+Redirect 301 /map /services/maps/
+Redirect 301 /telegram /services/smm-telegram/
+Redirect 301 /socialmedia /services/smm-telegram/
+Redirect 301 /productionservices /services/production/
+Redirect 301 /developmentservices /services/web/
+Redirect 301 /keys_legrand /cases/legrand/
+Redirect 301 /keys_petrovvodkin /cases/petrov-vodkin/
+Redirect 301 /keys_target /cases/target/
+Redirect 301 /keys_la_perla /cases/la-perla/
+Redirect 301 /keys_opti /cases/opti/
+Redirect 301 /keys_bochkari /cases/bochkari/
+Redirect 301 /keys_mazay /cases/mazay/
+Redirect 301 /keys_altay_zamok /cases/altay-zamok/
+Redirect 301 /keys_centrosouz /cases/centrosouz/
+Redirect 301 /keys_nevsky /cases/nevsky-bereg/
+Redirect 301 /keys_clinic /cases/klinika-pirogova/
+Redirect 301 /keys_alfafeeds /cases/alfafeeds/

@@ -1,0 +1,73 @@
+<!-- Proxy Agency · блок 03 · Услуги -->
+<!-- Вставка: Tilda → «Другое» → T123 «HTML-код». Вставлять целиком, вместе с <style>. -->
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+.pxa{--pxa-a:#5B3FE0;--pxa-b:#2F6BFF;--pxa-ink:#1B1646;--pxa-mute:#4B4F70;--pxa-tint:#F5F4FF;--pxa-line:#E3E1F5;
+font-family:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--pxa-ink);line-height:1.5;font-size:17px;-webkit-font-smoothing:antialiased;text-align:left}
+.pxa *,.pxa *::before,.pxa *::after{box-sizing:border-box}
+:where(.pxa) h1,:where(.pxa) h2,:where(.pxa) h3,:where(.pxa) h4,:where(.pxa) p,:where(.pxa) figure,:where(.pxa) blockquote{margin:0;padding:0}
+:where(.pxa) a{color:inherit}
+.pxa-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.pxa-sec{padding:96px 0}
+.pxa-h1{font-family:'Unbounded',sans-serif;font-weight:600;font-size:50px;line-height:1.14;letter-spacing:-.02em}
+.pxa-h2{font-family:'Unbounded',sans-serif;font-weight:600;font-size:34px;line-height:1.2;letter-spacing:-.02em}
+.pxa-big{font-family:'Unbounded',sans-serif;font-weight:600;letter-spacing:-.02em}
+.pxa-mute{color:var(--pxa-mute)}
+.pxa-btn{display:inline-block;text-decoration:none;background:linear-gradient(135deg,var(--pxa-a),var(--pxa-b));color:#fff;font-weight:600;padding:16px 28px;border-radius:14px;border:0;font-family:inherit;font-size:17px;cursor:pointer}
+.pxa-btn-ghost{display:inline-block;text-decoration:none;color:var(--pxa-ink);font-weight:600;padding:14px 26px;border-radius:14px;border:2px solid #CFCBEF;background:#fff}
+.pxa-btn-dark{display:inline-block;text-decoration:none;background:var(--pxa-ink);color:#fff;font-weight:600;padding:14px 24px;border-radius:14px;border:0;font-family:inherit;font-size:17px;cursor:pointer}
+.pxa-more{text-decoration:none;font-weight:600;color:var(--pxa-a)}
+.pxa-more:hover{text-decoration:underline}
+.pxa-logo{display:block}
+.pxa{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.pxa img{max-width:100%}
+:where(.pxa) ul,:where(.pxa) ol{list-style:none;margin:0;padding:0}
+.pxa li::marker{content:none}
+.pxa a:focus-visible,.pxa button:focus-visible,.pxa input:focus-visible,.pxa summary:focus-visible{outline:3px solid #2F6BFF;outline-offset:2px}
+@media (max-width:860px){
+.pxa-wrap{padding:0 20px}
+.pxa-sec{padding:56px 0}
+.pxa-h1{font-size:30px}
+.pxa-h2{font-size:24px}
+}
+
+.pxa-lede{margin:16px 0 0;max-width:620px;color:var(--pxa-mute)}
+.pxa-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:48px}
+.pxa-card{border:1px solid var(--pxa-line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:12px;background:#fff}
+.pxa-card-n{width:44px;height:44px;border-radius:14px;background:#EFEBFF;color:#4A3FB5;display:flex;align-items:center;justify-content:center;font-size:14px}
+.pxa-card-n.pxa-blue{background:#E3F1FF;color:#1F4FC4}
+.pxa-card h3{margin:8px 0 0;font-size:22px;line-height:1.25}
+.pxa-card p{color:var(--pxa-mute)}
+.pxa-card .pxa-more{margin-top:auto;padding-top:8px}
+.pxa-cta-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:32px;padding:24px 28px;background:var(--pxa-tint);border-radius:24px}
+.pxa-cta-band p{font-weight:600;font-size:19px}
+@media (max-width:860px){
+.pxa-cards{grid-template-columns:1fr;gap:12px;margin-top:24px}
+.pxa-card{padding:20px;border-radius:20px;gap:4px}
+.pxa-card-n{display:none}
+.pxa-card h3{margin:0;font-size:18px}
+.pxa-card p{font-size:15px}
+.pxa-card .pxa-more{padding-top:4px;font-size:15px}
+.pxa-cta-band{padding:0;background:none;margin-top:20px}
+.pxa-cta-band p{display:none}
+.pxa-cta-band .pxa-btn-dark{display:block;text-align:center;width:100%}
+}
+</style>
+<section class="pxa pxa-sec" id="pxa-services">
+<div class="pxa-wrap">
+<h2 class="pxa-h2">Услуги</h2>
+<p class="pxa-lede">Шесть направлений, которые работают как одна система: трафик, сайт, контент и аналитика.</p>
+<div class="pxa-cards">
+<div class="pxa-card"><span class="pxa-card-n pxa-big">01</span><h3>Реклама в интернете</h3><p>Яндекс Директ и таргет в соцсетях. Считаем стоимость заявки и снижаем её.</p><a class="pxa-more" href="/services/ads">Подробнее →</a></div>
+<div class="pxa-card"><span class="pxa-card-n pxa-big">02</span><h3>SEO и GEO</h3><p>Чтобы вас находили в поиске и рекомендовали нейросети.</p><a class="pxa-more" href="/services/seo-geo">Подробнее →</a></div>
+<div class="pxa-card"><span class="pxa-card-n pxa-big">03</span><h3>Карты и 2ГИС</h3><p>Яндекс Карты, Навигатор и 2ГИС: клиенты, которые ищут «рядом».</p><a class="pxa-more" href="/services/maps">Подробнее →</a></div>
+<div class="pxa-card"><span class="pxa-card-n pxa-blue pxa-big">04</span><h3>SMM и Telegram</h3><p>Каналы и соцсети, которые приводят клиентов, а не только подписчиков.</p><a class="pxa-more" href="/services/smm-telegram">Подробнее →</a></div>
+<div class="pxa-card"><span class="pxa-card-n pxa-blue pxa-big">05</span><h3>Сайты и разработка</h3><p>Сайты и приложения с настроенной аналитикой, быстрые и удобные с телефона.</p><a class="pxa-more" href="/services/web">Подробнее →</a></div>
+<div class="pxa-card"><span class="pxa-card-n pxa-blue pxa-big">06</span><h3>Продакшн</h3><p>Фото- и видеосъёмки для рекламы и соцсетей: контент, который продаёт.</p><a class="pxa-more" href="/services/production">Подробнее →</a></div>
+</div>
+<div class="pxa-cta-band">
+<p>Не знаете, что нужно? Начнём с бесплатного аудита.</p>
+<a class="pxa-btn-dark" href="#pxa-audit">Получить экспресс-аудит</a>
+</div>
+</div>
+</section>

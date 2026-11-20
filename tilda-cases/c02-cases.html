@@ -1,0 +1,218 @@
+<!-- Proxy Agency · страница «Кейсы» · блок c02 · Фильтры и кейсы -->
+<!-- Вставка: Tilda → «Другое» → T123 «HTML-код». Вставлять целиком, вместе с <style>. -->
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+.pxa{--pxa-a:#5B3FE0;--pxa-b:#2F6BFF;--pxa-ink:#1B1646;--pxa-mute:#4B4F70;--pxa-tint:#F5F4FF;--pxa-line:#E3E1F5;
+font-family:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--pxa-ink);line-height:1.5;font-size:17px;-webkit-font-smoothing:antialiased;text-align:left}
+.pxa *,.pxa *::before,.pxa *::after{box-sizing:border-box}
+:where(.pxa) h1,:where(.pxa) h2,:where(.pxa) h3,:where(.pxa) h4,:where(.pxa) p,:where(.pxa) figure,:where(.pxa) blockquote{margin:0;padding:0}
+:where(.pxa) a{color:inherit}
+.pxa-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.pxa-sec{padding:96px 0}
+.pxa-h1{font-family:'Unbounded',sans-serif;font-weight:600;font-size:50px;line-height:1.14;letter-spacing:-.02em}
+.pxa-h2{font-family:'Unbounded',sans-serif;font-weight:600;font-size:34px;line-height:1.2;letter-spacing:-.02em}
+.pxa-big{font-family:'Unbounded',sans-serif;font-weight:600;letter-spacing:-.02em}
+.pxa-mute{color:var(--pxa-mute)}
+.pxa-btn{display:inline-block;text-decoration:none;background:linear-gradient(135deg,var(--pxa-a),var(--pxa-b));color:#fff;font-weight:600;padding:16px 28px;border-radius:14px;border:0;font-family:inherit;font-size:17px;cursor:pointer}
+.pxa-btn-ghost{display:inline-block;text-decoration:none;color:var(--pxa-ink);font-weight:600;padding:14px 26px;border-radius:14px;border:2px solid #CFCBEF;background:#fff}
+.pxa-btn-dark{display:inline-block;text-decoration:none;background:var(--pxa-ink);color:#fff;font-weight:600;padding:14px 24px;border-radius:14px;border:0;font-family:inherit;font-size:17px;cursor:pointer}
+.pxa-more{text-decoration:none;font-weight:600;color:var(--pxa-a)}
+.pxa-more:hover{text-decoration:underline}
+.pxa-logo{display:block}
+.pxa{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.pxa img{max-width:100%}
+:where(.pxa) ul,:where(.pxa) ol{list-style:none;margin:0;padding:0}
+.pxa li::marker{content:none}
+.pxa a:focus-visible,.pxa button:focus-visible,.pxa input:focus-visible,.pxa summary:focus-visible{outline:3px solid #2F6BFF;outline-offset:2px}
+@media (max-width:860px){
+.pxa-wrap{padding:0 20px}
+.pxa-sec{padding:56px 0}
+.pxa-h1{font-size:30px}
+.pxa-h2{font-size:24px}
+}
+
+.pxa.pxa-cases{background:var(--pxa-tint)}
+.pxa-filters{display:flex;flex-wrap:wrap;gap:10px}
+.pxa-filter{font-family:inherit;font-size:15px;font-weight:600;padding:10px 18px;border-radius:999px;border:1px solid #CFCBEF;background:#fff;color:var(--pxa-ink);cursor:pointer;line-height:1.2}
+.pxa-filter span{font-weight:400;opacity:.75;margin-left:6px}
+.pxa-filter[aria-pressed="true"]{background:linear-gradient(135deg,var(--pxa-a),var(--pxa-b));color:#fff;border-color:transparent}
+.pxa-count{margin-top:20px;font-size:14px;color:#5A5F7D}
+.pxa-case-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:24px}
+.pxa-case{position:relative;background:#fff;border-radius:24px;overflow:hidden;display:flex;flex-direction:column;border:1px solid transparent}
+.pxa-case[hidden]{display:none}
+.pxa-case:hover{border-color:#CFCBEF;box-shadow:0 16px 40px rgba(91,63,224,.12)}
+.pxa-cover{height:190px;display:flex;align-items:center;justify-content:center;color:#3B3F63;font-size:14px}
+.pxa-case-b{padding:28px;display:flex;flex-direction:column;gap:8px;flex:1}
+.pxa-case-b small{font-size:14px;color:#5A5F7D}
+.pxa-case-b h3{font-size:21px;line-height:1.25}
+.pxa-case-a{text-decoration:none;color:inherit}
+.pxa-case-a::after{content:"";position:absolute;top:0;right:0;bottom:0;left:0}
+.pxa-case-a:focus-visible{outline:none}
+.pxa-case:focus-within{outline:3px solid #2F6BFF;outline-offset:2px}
+.pxa-fig{font-size:44px;line-height:1.1;margin-top:8px}
+.pxa-strong{font-weight:500}
+.pxa-desc{margin-top:4px;color:var(--pxa-mute);font-size:16px}
+.pxa-ph{color:#5A5F7D;font-size:15px;margin-top:8px}
+.pxa-go{margin-top:auto;padding-top:12px;font-weight:600;color:var(--pxa-a)}
+@media (max-width:1100px){
+.pxa-case-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:860px){
+.pxa-filters{flex-wrap:nowrap;overflow-x:auto;margin-right:-20px;padding:2px 20px 6px 0;-webkit-overflow-scrolling:touch}
+.pxa-filter{flex:none;font-size:14px;padding:9px 16px}
+.pxa-case-grid{grid-template-columns:1fr;gap:16px}
+.pxa-cover{display:none}
+.pxa-case{border-radius:20px}
+.pxa-case-b{padding:24px}
+.pxa-fig{font-size:36px}
+.pxa-desc{font-size:15px}
+}
+</style>
+<section class="pxa pxa-sec pxa-cases" id="pxa-cases">
+<div class="pxa-wrap">
+<div class="pxa-filters" role="group" aria-label="Фильтр кейсов по отрасли">
+<button class="pxa-filter" type="button" data-k="all" aria-pressed="true">Все<span>12</span></button>
+<button class="pxa-filter" type="button" data-k="rest" aria-pressed="false">Рестораны<span>3</span></button>
+<button class="pxa-filter" type="button" data-k="hotel" aria-pressed="false">Отели и санатории<span>3</span></button>
+<button class="pxa-filter" type="button" data-k="med" aria-pressed="false">Медицина<span>1</span></button>
+<button class="pxa-filter" type="button" data-k="prod" aria-pressed="false">Производство и FMCG<span>4</span></button>
+<button class="pxa-filter" type="button" data-k="retail" aria-pressed="false">АЗС и розница<span>1</span></button>
+</div>
+<p class="pxa-count" aria-live="polite">Показано кейсов: 12</p>
+<div class="pxa-case-grid">
+<article class="pxa-case" data-ind="rest">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#E4DCFF,#D2EEFF)">Петров-Водкин</div>
+<div class="pxa-case-b">
+<small>Ресторан русской кухни</small>
+<h3><a class="pxa-case-a" href="/cases/petrov-vodkin">Петров-Водкин</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-a)">+77%</div><p class="pxa-strong">онлайн-бронирований за 3 месяца</p>
+<p class="pxa-desc">Performance-реклама и локальные digital-каналы.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="retail">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#D2EEFF,#E4DCFF)">ОПТИ</div>
+<div class="pxa-case-b">
+<small>Сеть АЗС, партнёр «Газпром нефти»</small>
+<h3><a class="pxa-case-a" href="/cases/opti">ОПТИ</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-b)">+38%</div><p class="pxa-strong">регистраций в программе лояльности за 4 месяца</p>
+<p class="pxa-desc">Performance-маркетинг и продвижение программы лояльности.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="rest">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#EFEBFF,#CFE9FF)">Le Grand</div>
+<div class="pxa-case-b">
+<small>Ресторан в Калифорнии</small>
+<h3><a class="pxa-case-a" href="/cases/legrand">Le Grand</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-a)">В разы</div><p class="pxa-strong">рост выручки год к году</p>
+<p class="pxa-desc">Реклама на нескольких языках, блогеры Лос-Анджелеса, овербукинг в акционные дни.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="prod">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#E4DCFF,#D2EEFF)">TARGET energy drink</div>
+<div class="pxa-case-b">
+<small>Энергетический напиток</small>
+<h3><a class="pxa-case-a" href="/cases/target">TARGET energy drink</a></h3>
+<p class="pxa-strong">Плановые KPI выполнены</p>
+<p class="pxa-desc">Запуск продукта. Репутационный маркетинг. SMM.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="rest">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#D2EEFF,#E4DCFF)">La Perla</div>
+<div class="pxa-case-b">
+<small>Ресторан морской кухни</small>
+<h3><a class="pxa-case-a" href="/cases/la-perla">La Perla</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-a)">500%+</div><p class="pxa-strong">рост броней столиков в отдельных акциях</p>
+<p class="pxa-desc">Работа с рестораном и информационная поддержка новых открытий.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="prod">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#EFEBFF,#CFE9FF)">Бочкари</div>
+<div class="pxa-case-b">
+<small>Пивоваренный завод</small>
+<h3><a class="pxa-case-a" href="/cases/bochkari">Бочкари</a></h3>
+<p class="pxa-strong">Плановые KPI выполнены</p>
+<p class="pxa-desc">Промо нового бренда безалкогольного пива Weissberg: узнаваемость, охваты, вовлечённость.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="prod">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#E4DCFF,#D2EEFF)">Маzай</div>
+<div class="pxa-case-b">
+<small>Бренд пива</small>
+<h3><a class="pxa-case-a" href="/cases/mazay">Маzай</a></h3>
+<p class="pxa-strong">Плановые KPI выполнены</p>
+<p class="pxa-desc">Соцсети с нуля, персонаж-амбассадор и нативная реклама пива.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="hotel">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#D2EEFF,#E4DCFF)">Алтайский замок</div>
+<div class="pxa-case-b">
+<small>Санаторий в Белокурихе</small>
+<h3><a class="pxa-case-a" href="/cases/altay-zamok">Алтайский замок</a></h3>
+<p class="pxa-strong">Плановые KPI выполнены</p>
+<p class="pxa-desc">Контекст, карты, розыгрыши, таргет и SMM для санатория в Белокурихе.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="hotel">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#EFEBFF,#CFE9FF)">Санаторий Центросоюза РФ</div>
+<div class="pxa-case-b">
+<small>Лечебно-оздоровительный комплекс</small>
+<h3><a class="pxa-case-a" href="/cases/centrosouz">Санаторий Центросоюза РФ</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-a)">+18%</div><p class="pxa-strong">выручки от путёвок год к году</p>
+<p class="pxa-desc">Контекстная, таргетированная и CPA-реклама, 2016–2022.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="hotel">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#E4DCFF,#D2EEFF)">Невский берег</div>
+<div class="pxa-case-b">
+<small>Отели в центре Санкт-Петербурга</small>
+<h3><a class="pxa-case-a" href="/cases/nevsky-bereg">Невский берег</a></h3>
+<p class="pxa-strong">Плановые KPI выполнены</p>
+<p class="pxa-desc">Привлечение клиентов и снижение стоимости брони через performance-маркетинг, стратегию и digital.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="med">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#D2EEFF,#E4DCFF)">Клиника им. Н. И. Пирогова</div>
+<div class="pxa-case-b">
+<small>Многопрофильное медицинское учреждение</small>
+<h3><a class="pxa-case-a" href="/cases/klinika-pirogova">Клиника им. Н. И. Пирогова</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-a)">+158%</div><p class="pxa-strong">запросов от пациентов год к году</p>
+<p class="pxa-desc">Создание сайта, SEO и контекстная реклама. Пациенты со всей России.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+<article class="pxa-case" data-ind="prod">
+<div class="pxa-cover" style="background:linear-gradient(135deg,#EFEBFF,#CFE9FF)">Alfa Feeds</div>
+<div class="pxa-case-b">
+<small>Производитель травяных кормов</small>
+<h3><a class="pxa-case-a" href="/cases/alfafeeds">Alfa Feeds</a></h3>
+<div class="pxa-big pxa-fig" style="color:var(--pxa-b)">3 страны</div><p class="pxa-strong">заказчики из ОАЭ, РФ и Казахстана</p>
+<p class="pxa-desc">Интернет-образ с нуля, контекст и SEO для B2B-аудитории агросектора.</p>
+<span class="pxa-go" aria-hidden="true">Смотреть кейс →</span>
+</div>
+</article>
+</div>
+</div>
+<script>
+(function(){
+var root=document.getElementById('pxa-cases');if(!root)return;
+var btns=root.querySelectorAll('.pxa-filter'),cards=root.querySelectorAll('.pxa-case'),cnt=root.querySelector('.pxa-count');
+function apply(k){
+var n=0;
+cards.forEach(function(c){var show=(k==='all'||c.getAttribute('data-ind')===k);c.hidden=!show;if(show){n++;}});
+cnt.textContent='Показано кейсов: '+n;
+btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-k')===k?'true':'false');});
+}
+btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-k'));});});
+})();
+</script>
+</section>

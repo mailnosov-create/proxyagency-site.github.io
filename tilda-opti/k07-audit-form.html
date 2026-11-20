@@ -1,0 +1,69 @@
+<!-- Proxy Agency · кейс «ОПТИ» · блок k07 · Экспресс-аудит (форма) -->
+<!-- Вставка: Tilda → «Другое» → T123 «HTML-код». Вставлять целиком, вместе с <style>. -->
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+.pxa{--pxa-a:#5B3FE0;--pxa-b:#2F6BFF;--pxa-ink:#1B1646;--pxa-mute:#4B4F70;--pxa-tint:#F5F4FF;--pxa-line:#E3E1F5;
+font-family:'Onest',system-ui,-apple-system,'Segoe UI',sans-serif;color:var(--pxa-ink);line-height:1.5;font-size:17px;-webkit-font-smoothing:antialiased;text-align:left}
+.pxa *,.pxa *::before,.pxa *::after{box-sizing:border-box}
+:where(.pxa) h1,:where(.pxa) h2,:where(.pxa) h3,:where(.pxa) h4,:where(.pxa) p,:where(.pxa) figure,:where(.pxa) blockquote{margin:0;padding:0}
+:where(.pxa) a{color:inherit}
+.pxa-wrap{max-width:1200px;margin:0 auto;padding:0 32px}
+.pxa-sec{padding:96px 0}
+.pxa-h1{font-family:'Unbounded',sans-serif;font-weight:600;font-size:50px;line-height:1.14;letter-spacing:-.02em}
+.pxa-h2{font-family:'Unbounded',sans-serif;font-weight:600;font-size:34px;line-height:1.2;letter-spacing:-.02em}
+.pxa-big{font-family:'Unbounded',sans-serif;font-weight:600;letter-spacing:-.02em}
+.pxa-mute{color:var(--pxa-mute)}
+.pxa-btn{display:inline-block;text-decoration:none;background:linear-gradient(135deg,var(--pxa-a),var(--pxa-b));color:#fff;font-weight:600;padding:16px 28px;border-radius:14px;border:0;font-family:inherit;font-size:17px;cursor:pointer}
+.pxa-btn-ghost{display:inline-block;text-decoration:none;color:var(--pxa-ink);font-weight:600;padding:14px 26px;border-radius:14px;border:2px solid #CFCBEF;background:#fff}
+.pxa-btn-dark{display:inline-block;text-decoration:none;background:var(--pxa-ink);color:#fff;font-weight:600;padding:14px 24px;border-radius:14px;border:0;font-family:inherit;font-size:17px;cursor:pointer}
+.pxa-more{text-decoration:none;font-weight:600;color:var(--pxa-a)}
+.pxa-more:hover{text-decoration:underline}
+.pxa-logo{display:block}
+.pxa{overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.pxa img{max-width:100%}
+:where(.pxa) ul,:where(.pxa) ol{list-style:none;margin:0;padding:0}
+.pxa li::marker{content:none}
+.pxa a:focus-visible,.pxa button:focus-visible,.pxa input:focus-visible,.pxa summary:focus-visible{outline:3px solid #2F6BFF;outline-offset:2px}
+@media (max-width:860px){
+.pxa-wrap{padding:0 20px}
+.pxa-sec{padding:56px 0}
+.pxa-h1{font-size:30px}
+.pxa-h2{font-size:24px}
+}
+
+.pxa.pxa-audit{background:linear-gradient(135deg,var(--pxa-a),var(--pxa-b));color:#fff}
+.pxa-audit-row{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.pxa-audit-lead{margin-top:20px;font-size:19px;max-width:520px}
+.pxa-form{background:#fff;color:var(--pxa-ink);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.pxa-field{display:flex;flex-direction:column;gap:6px}
+.pxa-field label{font-size:14px;font-weight:600}
+.pxa-field input{font-family:inherit;font-size:17px;padding:14px 16px;border:1px solid #B9B6DD;border-radius:12px;background:#fff;color:var(--pxa-ink);width:100%}
+.pxa-consent{display:flex;align-items:flex-start;gap:10px}
+.pxa-consent input{margin-top:5px;width:18px;height:18px;flex:none}
+.pxa-consent label{font-size:14px;color:var(--pxa-mute)}
+.pxa-consent a{color:var(--pxa-ink)}
+@media (max-width:860px){
+.pxa-audit-row{grid-template-columns:1fr;gap:24px}
+.pxa-audit-lead{font-size:17px;margin-top:14px}
+.pxa-form{padding:20px;border-radius:20px}
+.pxa-form .pxa-btn-dark{width:100%}
+}
+</style>
+<section class="pxa pxa-sec pxa-audit" id="pxa-audit">
+<div class="pxa-wrap">
+<div class="pxa-audit-row">
+<div>
+<h2 class="pxa-h2">Хотите такой же результат?</h2>
+<p class="pxa-audit-lead">Расскажите о своей задаче. Начнём с бесплатного экспресс-аудита: покажем, где теряются заявки, за [2] рабочих дня.</p>
+</div>
+<!-- ВНИМАНИЕ: эта форма — только оформление. Чтобы заявки приходили, замените её штатным блоком формы Tilda
+     (он умеет слать заявки на почту, в Telegram и CRM), либо укажите свой обработчик в action. -->
+<form class="pxa-form" action="REPLACE_FORM_ENDPOINT" method="post">
+<div class="pxa-field"><label for="pxa-site">Сайт или аккаунт</label><input id="pxa-site" name="site" type="text" placeholder="proxyagency.ru"></div>
+<div class="pxa-field"><label for="pxa-contact">Телефон или Telegram</label><input id="pxa-contact" name="contact" type="text" placeholder="+7 ___ ___ __ __" required></div>
+<div class="pxa-consent"><input id="pxa-consent" name="consent" type="checkbox" required><label for="pxa-consent">Согласен на обработку персональных данных. <a href="/privacy">Политика конфиденциальности</a></label></div>
+<button class="pxa-btn-dark" type="submit">Получить аудит</button>
+</form>
+</div>
+</div>
+</section>

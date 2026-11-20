@@ -28,11 +28,23 @@ def _conv(src, dest, maxw=1400, limit=250_000):
 def _files(slug):
     return sorted(f for f in glob.glob(f"{MEDIA}/{slug}/*") if f.lower().endswith(EXT))
 
+COVER_STYLE = {}
 def cover(slug):
-    """путь обложки или None"""
+    """путь обложки или None. cover-contain.* — вписать целиком (логотипы), cover-pos.txt — точка фокуса"""
     for f in _files(slug):
-        if os.path.basename(f).lower().startswith("cover."):
+        n = os.path.basename(f).lower()
+        if n.startswith(("cover.", "cover-contain.")):
             d = f"/assets/img/cases/{slug}/cover.webp"
+            st = ""
+            if n.startswith("cover-contain."):
+                im = Image.open(f).convert("RGBA"); w, h = im.size
+                r, g, b, _ = im.getpixel((int(w * 0.03), h // 2))
+                st = f"object-fit:contain;background:#{r:02x}{g:02x}{b:02x}"
+                bgc = Image.new("RGB", im.size, (r, g, b)); bgc.paste(im, mask=im.split()[3])
+                bgc.save(f"/tmp/_cv_{slug}.png"); f = f"/tmp/_cv_{slug}.png"
+            pf = f"{MEDIA}/{slug}/cover-pos.txt"
+            if os.path.exists(pf): st += f"object-position:{open(pf).read().strip()}"
+            COVER_STYLE[slug] = st
             _conv(f, d, 900, 120_000)
             return d
     return None
@@ -47,7 +59,7 @@ def _video_embed(url):
     return None
 
 def gallery(slug, title):
-    fs = [f for f in _files(slug) if not os.path.basename(f).lower().startswith(("cover.", "video-poster."))]
+    fs = [f for f in _files(slug) if not os.path.basename(f).lower().startswith(("cover.", "cover-contain.", "video-poster."))]
     caps = {}
     cf = f"{MEDIA}/{slug}/captions.txt"
     if os.path.exists(cf):

@@ -144,7 +144,7 @@ def media_inject(path, h):
             sl = re.search(r'href="/cases/([a-z0-9-]+)', m.group(0)).group(1)
             cv = M.cover(sl)
             if not cv: return m.group(0)
-            return re.sub(r'<div class="pxa-cover"[^>]*>[^<]*</div>', f'<img class="pxa-cover-img" src="{cv}" loading="lazy" alt="">', m.group(0), count=1)
+            return re.sub(r'<div class="pxa-cover"[^>]*>[^<]*</div>', f'<img class="pxa-cover-img" src="{cv}" loading="lazy" alt="" style="{M.COVER_STYLE.get(sl, "")}">', m.group(0), count=1)
         h = re.sub(r'<article class="pxa-case".*?</article>', rep, h, flags=re.S)
     if path == "":
         lg = M.logos()

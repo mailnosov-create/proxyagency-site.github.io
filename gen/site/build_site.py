@@ -138,9 +138,7 @@ def media_inject(path, h):
             if g:
                 key = '<section class="pxa pxa-sec" id="pxa-review"' if 'id="pxa-review"' in h else '<section class="pxa pxa-sec" id="pxa-takeaways"'
                 h = h.replace(key, g + key, 1); used = True
-            cv = M.cover(slug)
-            if cv:
-                h = re.sub(r'(<section class="[^"]*" id="pxa-kpi")', f'<div class="pxa pxa-sec" style="padding-bottom:0"><div class="pxa-wrap"><img class="pxa-hero-img" src="{cv}" alt="{c["crumb"]}" fetchpriority="high"></div></div>\\1', h, 1)
+
     if path == "cases":
         def rep(m):
             sl = re.search(r'href="/cases/([a-z0-9-]+)', m.group(0)).group(1)
